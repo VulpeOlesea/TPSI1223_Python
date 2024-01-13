@@ -8,7 +8,7 @@ num2 = int(input("Digite o segundo número inteiro: "))
 num3 = float(input("Digite o número real: "))
 
 prod = (num1 * 2) * (num2 / 2)
-soma = (3 * num1 ) + num3
+soma = (3 * num1) + num3
 cubo = num3 ** 3
 
 print(f"O produto do dobro do primeiro com metade do segundo: {prod}")
