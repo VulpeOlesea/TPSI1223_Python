@@ -11,7 +11,7 @@ if peso_peixe > 50:
     peso_excesso = peso_peixe - 50
     multa = peso_excesso * 4
     print(f"Você excedeu o peso permitido em {peso_excesso} quilos.")
-    print(f"O valor de sua multa é de {multa} R$.")
+    print(f"O valor de sua multa é de {multa} €.")
 else:
     print("Você não excedeu o peso permitido.")
 
