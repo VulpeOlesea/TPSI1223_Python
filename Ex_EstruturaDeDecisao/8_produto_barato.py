@@ -19,7 +19,3 @@ elif produto2 == produto3 and produto2 < produto1:
     print(f"Os segundo e terceiro produtos são os mais baratos com valor {produto2} €")
 else:
     print(f"Todos os produtos são iguais com valor {produto1} €")
-
-
-
-
