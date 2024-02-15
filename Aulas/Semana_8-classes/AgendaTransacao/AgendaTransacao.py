@@ -30,19 +30,23 @@ class AgendaTransacao:
         print(f"Saldo atual da conta: {self.saldo} €")
 
     def transacao(self):
-        print("---" * 15)
-        print("Escolha a transação:")
-        print("1. Depositar")
-        print("2. Sacar")
-        escolha = input("Digite o número da transação desejada (1 ou 2): ")
-        if escolha == "1":
-            dinheiro = float(input("Digite o valor do depósito em €: "))
-            self.deposito(dinheiro)
-        elif escolha == "2":
-            dinheiro = float(input("Digite o valor do saque em €: "))
-            self.retirar(dinheiro)
-        else:
-            raise DataError("Escolha inválida. Por favor, tente novamente.")
+        while True:
+            print("---" * 15)
+            print("Escolha a transação:")
+            print("1. Depositar")
+            print("2. Sacar")
+            print("3. Cancelar e fechar o menu")
+            escolha = input("----------> Digite o número da transação desejada (1 ou 2): ")
+            if escolha == "1":
+                dinheiro = float(input("----------> Digite o valor do depósito em €: "))
+                self.deposito(dinheiro)
+            elif escolha == "2":
+                dinheiro = float(input("----------> Digite o valor do saque em €: "))
+                self.retirar(dinheiro)
+            elif escolha == "3":
+                break
+            else:
+                raise DataError("Escolha inválida. Por favor, tente novamente.")
 
     def registrar_transacao(self, msg):
         with open("Transacoes.log", "a") as file:
@@ -55,3 +59,5 @@ conta = AgendaTransacao(numero_conta="123456", nome_titular="Eva", saldo=1000.0)
 print("---" * 15)
 conta.saldo_atual()
 conta.transacao()
+print("---" * 15)
+conta.saldo_atual()
