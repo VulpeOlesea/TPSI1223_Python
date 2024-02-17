@@ -7,3 +7,6 @@ def argumento(a):
     else:
         print("O seu argumento é negativo: N")
 
+
+num = float(input("Digite um numero: "))
+argumento(num)
