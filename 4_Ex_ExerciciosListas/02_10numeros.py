@@ -5,8 +5,6 @@ lista = []
 for i in range(10):
     num = float(input(f"Digite o {i+1}º número: "))
     lista.append(num)
-
-print(f"Números digitados: {lista}")
-lista.sort(reverse=True)
-print(f"Ordem inversa: {lista}")
+for num in reversed(lista):
+    print(f"Ordem inversa: {num}")
 
